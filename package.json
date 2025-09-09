@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://jaopdc11.github.io/seven-geniuns-app",
+    "homepage": "seven.jaopd.dev",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",

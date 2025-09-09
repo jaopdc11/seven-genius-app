@@ -1,14 +1,11 @@
 import * as React from "react";
-// ou, na moral, mais direto:
 import { useState } from "react";
-
-import type { JSX } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
+import type { JSX } from "react";
 
 const Results: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
-
     const result = location.state?.results;
 
     const [activeTab, setActiveTab] = useState(0);
@@ -21,29 +18,26 @@ const Results: React.FC = () => {
         }
     }, [result, navigate]);
 
-    // Scroll styles inline no componente (igual antes)
     const scrollStyles = `
     ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
+        width: 8px;
+        height: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #d1fae5;
+        background: #d1fae5;
     }
     ::-webkit-scrollbar-thumb {
-      background-color: #34d399;
-      border-radius: 10px;
-      border: 2px solid #d1fae5;
+        background-color: #34d399;
+        border-radius: 10px;
+        border: 2px solid #d1fae5;
     }
     * {
-      scrollbar-width: thin;
-      scrollbar-color: #34d399 #d1fae5;
+        scrollbar-width: thin;
+        scrollbar-color: #34d399 #d1fae5;
     }
-  `;
+    `;
 
-    // Função pra limpar dados e voltar pra página de upload zerada
     const handleBackToUpload = () => {
-        // Limpa o state passando undefined na navegação
         navigate('/', { state: {} });
     };
 

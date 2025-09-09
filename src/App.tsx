@@ -19,7 +19,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <BrowserRouter basename="/seven-geniuns-app/">
+    <BrowserRouter basename="/">
       <Routes key={token ? 'logged-in' : 'logged-out'}>
         <Route
           path="/"

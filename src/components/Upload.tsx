@@ -205,7 +205,7 @@ const Upload: React.FC<UploadProps> = ({ token, onResults }) => {
                         style={{ zIndex: 50 }}
                     >
                         <div className="spinner"></div>
-                        <p className="mt-4 text-green-700 font-semibold text-lg animate-fade-in">Preparando a porra do resultado...</p>
+                        <p className="mt-4 text-green-700 font-semibold text-lg animate-fade-in">Preparando o resultado...</p>
                     </div>
                 )}
             </div>
